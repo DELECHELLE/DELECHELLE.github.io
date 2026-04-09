@@ -1,19 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delechelle</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #333;
+      background: #fafafa;
+      line-height: 1.6;
+    }
+    header {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+    }
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    nav a {
+      color: #e0e0e0;
+      text-decoration: none;
+      font-size: 0.95rem;
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    nav a:hover { border-color: #e0e0e0; }
+    main {
+      max-width: 720px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+    section { margin-bottom: 2.5rem; }
+    section h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+      color: #1a1a2e;
+    }
+    section p {
+      color: #555;
+    }
+    .links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+    .links a {
+      color: #1a1a2e;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid #ccc;
+      transition: border-color 0.2s;
+    }
+    .links a:hover { border-color: #1a1a2e; }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      color: #999;
+    }
+  </style>
+</head>
 <body>
-<h1>JavaScript HTML Events</h1>
-<h2>The onclick Attribute</h2>
-
-<p>Click the button to display the date.</p>
-<button onclick="displayDate()">The time is?</button>
-
-<script>
-function displayDate() {
-  document.getElementById("demo").innerHTML = Date();
-}
-</script>
-
-<p id="demo"></p>
-
+  <header>
+    <h1>Delechelle</h1>
+    <p>Bienvenue sur ma page personnelle</p>
+    <nav>
+      <a href="#about">A propos</a>
+      <a href="#projets">Projets</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section id="about">
+      <h2>A propos</h2>
+      <p>Bienvenue ! Ce site est mon espace personnel sur le web. N'hesitez pas a explorer mes projets et a me contacter.</p>
+    </section>
+    <section id="projets">
+      <h2>Projets</h2>
+      <p>Mes projets seront bientot disponibles ici.</p>
+      <div class="links">
+        <a href="https://github.com/delechelle">GitHub</a>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Vous pouvez me retrouver sur GitHub pour echanger ou collaborer.</p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2026 Delechelle
+  </footer>
 </body>
-</html> 
+</html>
