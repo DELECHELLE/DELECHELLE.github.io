@@ -3,36 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Delechelle</title>
+  <title>Département Informatique — IUT de Créteil-Vitry</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: #333;
       background: #fafafa;
-      line-height: 1.6;
+      line-height: 1.7;
     }
     header {
-      background: #1a1a2e;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
       color: #fff;
       padding: 4rem 2rem;
       text-align: center;
     }
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.4rem;
+      margin-bottom: 0.4rem;
       font-weight: 300;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.03em;
     }
-    header p {
-      font-size: 1.1rem;
-      opacity: 0.85;
+    header .subtitle {
+      font-size: 1.15rem;
+      opacity: 0.9;
+      margin-bottom: 0.3rem;
+    }
+    header .location {
+      font-size: 0.95rem;
+      opacity: 0.7;
     }
     nav {
       display: flex;
       justify-content: center;
       gap: 2rem;
       margin-top: 1.5rem;
+      flex-wrap: wrap;
     }
     nav a {
       color: #e0e0e0;
@@ -44,7 +50,7 @@
     }
     nav a:hover { border-color: #e0e0e0; }
     main {
-      max-width: 720px;
+      max-width: 780px;
       margin: 3rem auto;
       padding: 0 1.5rem;
     }
@@ -56,12 +62,52 @@
     }
     section p {
       color: #555;
+      margin-bottom: 0.6rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      padding: 1.3rem;
+      transition: box-shadow 0.2s;
+    }
+    .card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+    .card h3 {
+      font-size: 1rem;
+      color: #1a1a2e;
+      margin-bottom: 0.4rem;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0;
+    }
+    ul.competences {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+    ul.competences li {
+      background: #eef;
+      color: #1a1a2e;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
     }
     .links {
       display: flex;
       gap: 1.5rem;
       flex-wrap: wrap;
-      margin-top: 0.5rem;
+      margin-top: 0.75rem;
     }
     .links a {
       color: #1a1a2e;
@@ -81,33 +127,73 @@
 </head>
 <body>
   <header>
-    <h1>Delechelle</h1>
-    <p>Bienvenue sur ma page personnelle</p>
+    <h1>Département Informatique</h1>
+    <p class="subtitle">BUT Informatique — Bachelor Universitaire de Technologie</p>
+    <p class="location">IUT de Créteil-Vitry &middot; Université Paris-Est Créteil</p>
     <nav>
-      <a href="#about">A propos</a>
-      <a href="#projets">Projets</a>
+      <a href="#formation">La formation</a>
+      <a href="#competences">Compétences</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#departement">Le département</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
   <main>
-    <section id="about">
-      <h2>A propos</h2>
-      <p>Bienvenue ! Ce site est mon espace personnel sur le web. N'hesitez pas a explorer mes projets et a me contacter.</p>
+    <section id="formation">
+      <h2>La formation BUT Informatique</h2>
+      <p>Le BUT Informatique est un diplôme national en 3 ans (grade licence) qui forme des informaticiens capables de participer à la conception, la réalisation et la mise en œuvre de solutions informatiques.</p>
+      <p>La formation couvre un large spectre de compétences : développement d'applications, gestion de bases de données, administration de systèmes et réseaux, et conduite de projets.</p>
     </section>
-    <section id="projets">
-      <h2>Projets</h2>
-      <p>Mes projets seront bientot disponibles ici.</p>
-      <div class="links">
-        <a href="https://github.com/delechelle">GitHub</a>
+
+    <section id="competences">
+      <h2>Compétences développées</h2>
+      <ul class="competences">
+        <li>Développement d'applications</li>
+        <li>Bases de données</li>
+        <li>Administration systèmes &amp; réseaux</li>
+        <li>Conception &amp; modélisation</li>
+        <li>Gestion de projet</li>
+        <li>Algorithmique</li>
+        <li>Programmation web</li>
+        <li>Communication professionnelle</li>
+      </ul>
+    </section>
+
+    <section id="parcours">
+      <h2>Les parcours</h2>
+      <p>À partir de la 2e année, les étudiants choisissent un parcours de spécialisation :</p>
+      <div class="cards">
+        <div class="card">
+          <h3>Réalisation d'applications</h3>
+          <p>Conception, développement et déploiement d'applications (web, mobile, logicielles).</p>
+        </div>
+        <div class="card">
+          <h3>Administration, gestion et exploitation des données</h3>
+          <p>Gestion des systèmes d'information, bases de données et analyse de données.</p>
+        </div>
+        <div class="card">
+          <h3>Déploiement d'applications communicantes et sécurisées</h3>
+          <p>Administration réseau, cybersécurité et déploiement d'infrastructures.</p>
+        </div>
       </div>
     </section>
+
+    <section id="departement">
+      <h2>Le département</h2>
+      <p>Le département Informatique de l'IUT de Créteil-Vitry fait partie de l'Université Paris-Est Créteil (UPEC). Il accueille chaque année des étudiants passionnés par le numérique dans un environnement à taille humaine, favorisant l'accompagnement personnalisé et la réussite.</p>
+      <p>L'équipe pédagogique est composée d'enseignants, d'enseignants-chercheurs et de professionnels du secteur, garantissant une formation ancrée dans la réalité du monde professionnel.</p>
+    </section>
+
     <section id="contact">
-      <h2>Contact</h2>
-      <p>Vous pouvez me retrouver sur GitHub pour echanger ou collaborer.</p>
+      <h2>Contact &amp; liens utiles</h2>
+      <div class="links">
+        <a href="https://www.iut.u-pec.fr/">IUT de Créteil-Vitry</a>
+        <a href="https://www.u-pec.fr/">UPEC</a>
+      </div>
     </section>
   </main>
   <footer>
-    &copy; 2026 Delechelle
+    Département Informatique &middot; IUT de Créteil-Vitry &middot; Université Paris-Est Créteil
   </footer>
 </body>
 </html>
