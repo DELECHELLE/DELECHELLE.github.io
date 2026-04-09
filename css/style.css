@@ -213,9 +213,59 @@ footer {
 }
 
 /* === RESPONSIVE === */
-@media (max-width: 600px) {
-  .hero h1 { font-size: 1.8rem; }
-  .navbar nav { gap: 1rem; }
+
+/* Tablette */
+@media (max-width: 768px) {
+  .hero { padding: 3.5rem 1.5rem 3rem; }
+  .hero h1 { font-size: 2rem; }
+  .hero .subtitle { font-size: 1rem; }
+
+  main { padding: 2.5rem 1.5rem; }
+  section { margin-bottom: 2.5rem; }
+  section p { max-width: 100%; }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .navbar { padding: 0 1rem; }
+  .navbar-inner {
+    flex-direction: column;
+    height: auto;
+    padding: 0.75rem 0;
+    gap: 0.5rem;
+  }
+  .navbar nav {
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .navbar nav a { font-size: 0.8rem; }
-  main { padding: 2rem 1.25rem; }
+
+  .hero { padding: 2.5rem 1rem 2rem; }
+  .hero h1 { font-size: 1.6rem; }
+  .hero .subtitle { font-size: 0.9rem; }
+  .hero .location { font-size: 0.85rem; }
+
+  main { padding: 2rem 1rem; }
+
+  section h2 { font-size: 1.15rem; }
+
+  .card { padding: 1.2rem; }
+
+  .tags li {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .links { flex-direction: column; }
+  .links a {
+    justify-content: center;
+    width: 100%;
+  }
+
+  footer { padding: 1.5rem 1rem; font-size: 0.75rem; }
 }
